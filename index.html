@@ -4,103 +4,158 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="src/styles.css" />
 
     <title>Weather App 2</title>
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col-4">
-          <ul>
-            <li>
-              <img src="src/images/sunny.svg" alt="Sunny" />
-            </li>
-            <li>Sunny</li>
-          </ul>
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <div class="row">
+            <div class="col-5">
+              <img
+                src="src/images/sunny.svg"
+                alt="Sunny"
+                class="weather-icon-top"
+              />
+              <div class="weather-description">Sunny</div>
+            </div>
+            <div class="col-7">
+              <ul>
+                <li>
+                  <img
+                    src="src/images/temperature-781176.svg"
+                    alt="Temperature"
+                    class="temperature-icon"
+                  />
+                  <strong>23</strong>
+                  <span class="units">°C | <a href="#">°F</a></span>
+                </li>
+                <li>
+                  <img
+                    src="src/images/flag-781160.svg"
+                    alt="Wind"
+                    class="wind-icon"
+                  />
+                  5 km/h
+                  <img
+                    src="src/images/compass-781153.svg"
+                    alt="Wind direction"
+                    class="wind-icon"
+                  />
+                  N
+                </li>
+                <li>
+                  <img
+                    src="src/images/humidity-781162.svg"
+                    alt="Humidity"
+                    class="wind-icon"
+                  />
+                  69%
+                </li>
+                <li class="city">Amsterdam</li>
+              </ul>
+            </div>
+            <img src="src/images/amsterdam.svg" width="50" class="city-icon" />
+          </div>
+          <hr />
+          <div class="weather-forecast">
+            <div class="row">
+              <div class="col week-day">Sat</div>
+              <div class="col week-day">Sun</div>
+              <div class="col week-day">Mon</div>
+              <div class="col week-day">Tue</div>
+              <div class="col week-day">Wed</div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <img
+                  src="src/images/lightning-781163.svg"
+                  alt="Lightning"
+                  class="weather-icon"
+                />
+              </div>
+              <div class="col">
+                <img
+                  src="src/images/cloudy-781152.svg"
+                  alt="Cloudy"
+                  class="weather-icon"
+                />
+              </div>
+              <div class="col">
+                <img
+                  src="src/images/rainy-781168.svg"
+                  alt="Rainy"
+                  class="weather-icon"
+                />
+              </div>
+              <div class="col">
+                <img
+                  src="src/images/foggy-781159.svg"
+                  alt="Foggy"
+                  class="weather-icon"
+                />
+              </div>
+              <div class="col">
+                <img
+                  src="src/images/partly-cloudy-781149.svg"
+                  alt="Partly Cloudy"
+                  class="weather-icon"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col temp">1° <span class="highest-temp">6°</span></div>
+            <div class="col temp">
+              10° <span class="highest-temp">15°</span>
+            </div>
+            <div class="col temp">
+              17° <span class="highest-temp">23°</span>
+            </div>
+            <div class="col temp">-2° <span class="highest-temp">8°</span></div>
+            <div class="col temp">
+              15° <span class="highest-temp">20°</span>
+            </div>
+          </div>
         </div>
-        <div class="col-8">
-          <ul>
-            <li>
-              <img src="src/images/temperature-781176.svg" alt="Temperature" />
-              23 °C | <a href="#">°F</a>
-            </li>
-            <li>
-              <img src="src/images/flag-781160.svg" alt="Wind" /> 5 km/h |
-              <img src="src/images/compass-781153.svg" alt="Wind direction" /> N
-            </li>
-            <li>
-              <img src="src/images/humidity-781162.svg" alt="Humidity" /> 69 %
-            </li>
-            <li>Amsterdam</li>
-          </ul>
+        <div class="footer">
+          <a
+            href="https://github.com/sandramkraus158/weather-app-vs2"
+            target="_blank"
+            >Open-source code</a
+          >
+          by Sandra-Maria Kraus<br />
+          <a href="https://iconscout.com/icons/amsterdam" target="_blank"
+            >City Icons</a
+          >
+          by
+          <a
+            href="https://iconscout.com/contributors/icon-mafia"
+            target="_blank"
+            >Icon Mafia</a
+          >
+          <br />
+          <a
+            href="https://iconscout.com/icon-pack/weather-forecast-outline-flat"
+            target="_blank"
+            >Weather Forecast Outline Flat Icon Pack</a
+          >
+          by
+          <a href="https://iconscout.com/contributors/petai-jantrapoon"
+            >Petai Jantrapoon</a
+          >
+          on <a href="https://iconscout.com">Iconscout</a>
         </div>
-        <img src="src/images/amsterdam.svg" width="50" />
-      </div>
-      <div class="row">
-        <div class="col week-day">Sat</div>
-        <div class="col week-day">Sun</div>
-        <div class="col week-day">Mon</div>
-        <div class="col week-day">Tue</div>
-        <div class="col week-day">Wed</div>
-      </div>
-      <div class="row">
-        <div class="col weather-icon">
-          <img src="src/images/lightning-781163.svg" alt="Lightning" />
-        </div>
-        <div class="col weather-icon">
-          <img src="src/images/cloudy-781152.svg" alt="Cloudy" />
-        </div>
-        <div class="col weather-icon">
-          <img src="src/images/rainy-781168.svg" alt="Rainy" />
-        </div>
-        <div class="col weather-icon">
-          <img src="src/images/foggy-781159.svg" alt="Foggy" />
-        </div>
-        <div class="col weather-icon">
-          <img src="src/images/partly-cloudy-781149.svg" alt="Partly Cloudy" />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col temp">1° / 6°</div>
-        <div class="col temp">10° / 15°</div>
-        <div class="col temp">17° / 23°</div>
-        <div class="col temp">-2° / 2°</div>
-        <div class="col temp">15° / 22°</div>
       </div>
     </div>
-    <small>
-      <a
-        href="https://github.com/sandramkraus158/weather-app-vs2"
-        target="_blank"
-        >Open-source code</a
-      >
-      by Sandra-Maria Kraus<br />
-      <a href="https://iconscout.com/icons/amsterdam" target="_blank"
-        >Amsterdam Icon</a
-      >
-      by
-      <a href="https://iconscout.com/contributors/icon-mafia" target="_blank"
-        >Icon Mafia</a
-      >
-      <br />
-      <a
-        href="https://iconscout.com/icon-pack/weather-forecast-outline-flat"
-        target="_blank"
-        >Weather Forecast Outline Flat Icon Pack</a
-      >
-      by
-      <a href="https://iconscout.com/contributors/petai-jantrapoon"
-        >Petai Jantrapoon</a
-      >
-      on <a href="https://iconscout.com">Iconscout</a>
-    </small>
     <script src="src/app.js"></script>
   </body>
 </html>
