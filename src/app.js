@@ -30,6 +30,8 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
   let feelsElement = document.querySelector("#feels");
   let dateElement = document.querySelector("#date-time");
+  let iconElement = document.querySelector("#icon");
+
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -37,6 +39,11 @@ function displayTemperature(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
   feelsElement.innerHTML = Math.round(response.data.main.feels_like);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `src/images/${response.data.weather[0].icon}.svg`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 let apiKey = "8c05c4bf43fef6ac6197b744de668563";
