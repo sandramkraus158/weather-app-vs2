@@ -21,8 +21,8 @@ li {
 }
 
 strong {
-  font-size: 50px;
-  line-height: 50px;
+  font-size: 70px;
+  line-height: 60px;
 }
 
 .weather-app-wrapper {
@@ -83,8 +83,8 @@ strong {
 }
 
 .temperature-icon {
-  max-width: 50px;
-  margin-bottom: 25px;
+  max-width: 60px;
+  margin-bottom: 35px;
   margin-right: 5px;
 }
 
