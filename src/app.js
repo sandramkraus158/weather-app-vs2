@@ -35,6 +35,8 @@ function displayTemperature(response) {
   let dateElement = document.querySelector("#date-time");
   let iconElement = document.querySelector("#icon");
 
+  celsiusTemperature = response.data.main.temp;
+
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   countryElement.innerHTML = response.data.sys.country;
@@ -65,7 +67,32 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-search("Brisbane");
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+  celsius.classList.remove("active"); //remove the link from F to C
+  fahrenheit.classList.add("active"); //activate the F as default
+}
+
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  celsius.classList.add("active");
+  fahrenheit.classList.remove("active");
+}
+
+let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", displayFahrenheitTemp);
+
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", displayCelsiusTemp);
+
+search("Brisbane");
