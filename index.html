@@ -10,6 +10,9 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="src/styles.css" />
 
     <title>Weather App 2</title>
@@ -25,7 +28,7 @@
                 alt="Sunny"
                 class="weather-icon-top"
               />
-              <div class="weather-description">Sunny</div>
+              <div class="weather-description" id="description"></div>
             </div>
             <div class="col-7">
               <ul>
@@ -35,22 +38,17 @@
                     alt="Temperature"
                     class="temperature-icon"
                   />
-                  <strong>23</strong>
+                  <strong id="temperature"></strong>
                   <span class="units">°C | <a href="#">°F</a></span>
                 </li>
+                <li>Feels like <span id="feels"></span>°</li>
                 <li>
                   <img
                     src="src/images/flag-781160.svg"
                     alt="Wind"
                     class="wind-icon"
                   />
-                  5 km/h
-                  <img
-                    src="src/images/compass-781153.svg"
-                    alt="Wind direction"
-                    class="wind-icon"
-                  />
-                  N
+                  <span id="wind"> </span> km/h
                 </li>
                 <li>
                   <img
@@ -58,9 +56,9 @@
                     alt="Humidity"
                     class="wind-icon"
                   />
-                  69%
+                  <span id="humidity"></span>%
                 </li>
-                <li class="city">Amsterdam</li>
+                <li class="city" id="city"></li>
               </ul>
             </div>
             <img src="src/images/amsterdam.svg" width="50" class="city-icon" />

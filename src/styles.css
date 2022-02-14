@@ -38,6 +38,7 @@ strong {
 .weather-description {
   margin: 0px 30px;
   font-size: 20px;
+  text-transform: capitalize;
 }
 
 .units {
