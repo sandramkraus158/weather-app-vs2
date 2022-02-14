@@ -84,6 +84,19 @@ function displayCelsiusTemp(event) {
   fahrenheit.classList.remove("active");
 }
 
+function handlePosition(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let apiKey = "8c05c4bf43fef6ac6197b744de668563";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(handlePosition);
+}
+
 let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form");
@@ -94,5 +107,8 @@ fahrenheit.addEventListener("click", displayFahrenheitTemp);
 
 let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", displayCelsiusTemp);
+
+let currentLocation = document.querySelector("#location");
+currentLocation.addEventListener("click", getCurrentLocation);
 
 search("Brisbane");
