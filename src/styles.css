@@ -47,6 +47,11 @@ strong {
   vertical-align: top;
 }
 
+.max-min {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
 .city {
   font-size: 25px;
   margin-top: 10px;
@@ -84,9 +89,7 @@ strong {
 }
 
 .temperature-icon {
-  max-width: 60px;
-  margin-bottom: 35px;
-  margin-right: 5px;
+  max-width: 25px;
 }
 
 .wind-icon {

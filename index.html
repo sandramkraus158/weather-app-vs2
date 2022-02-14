@@ -21,6 +21,25 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
+          <form id="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-8">
+                <input
+                  type="search"
+                  placeholder="Type a city ..."
+                  class="form-control"
+                  id="city-input"
+                />
+              </div>
+              <div class="col-4">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-primary w-100"
+                />
+              </div>
+            </div>
+          </form>
           <div class="row">
             <div class="col-5">
               <img src="" alt="" class="weather-icon-top" id="icon" />
@@ -29,15 +48,18 @@
             <div class="col-7">
               <ul>
                 <li>
+                  <strong id="temperature"></strong>
+                  <span class="units">°C | <a href="#">°F</a></span>
+                </li>
+                <li>Feels like <span id="feels"></span>°</li>
+                <li class="max-min">
                   <img
                     src="src/images/temperature-781176.svg"
                     alt="Temperature"
                     class="temperature-icon"
                   />
-                  <strong id="temperature"></strong>
-                  <span class="units">°C | <a href="#">°F</a></span>
+                  <span id="temp-max"></span>° | <span id="temp-min"></span>°
                 </li>
-                <li>Feels like <span id="feels"></span>°</li>
                 <li>
                   <img
                     src="src/images/flag-781160.svg"
@@ -54,7 +76,10 @@
                   />
                   <span id="humidity"></span>%
                 </li>
-                <li class="city" id="city"></li>
+                <li>
+                  <span class="city" id="city"></span>,
+                  <span class="city" id="country"></span>
+                </li>
                 <li>Last updated: <span id="date-time"></span></li>
               </ul>
             </div>
