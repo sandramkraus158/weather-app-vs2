@@ -35,7 +35,7 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 6) {
+    if (index > 0 && index < 6) {
       forecastHTML =
         forecastHTML +
         `
@@ -43,7 +43,7 @@ function displayForecast(response) {
       <div class="week-day-forecast">${formatDay(forecastDay.dt)}</div>
       <img src="src/images/${
         forecastDay.weather[0].icon
-      }.svg" alt="" class="weather-icon" />
+      }.svg" alt="#" class="weather-icon" />
       <div class="min-temp">
         ${Math.round(
           forecastDay.temp.min
