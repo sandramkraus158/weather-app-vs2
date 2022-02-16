@@ -91,7 +91,6 @@ strong {
 /*icons*/
 .weather-icon-top {
   max-width: 300px;
-  filter: drop-shadow(0 0 0.15rem rgb(128, 128, 128));
 }
 
 .temperature-icon {
@@ -110,5 +109,4 @@ strong {
 
 .weather-icon {
   max-width: 50px;
-  filter: drop-shadow(0 0 0.15rem rgb(186, 186, 186));
 }
