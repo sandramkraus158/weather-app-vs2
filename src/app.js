@@ -78,7 +78,7 @@ function displayTemperature(response) {
   let dateElement = document.querySelector("#date-time");
   let iconElement = document.querySelector("#icon");
 
-  celsiusTemperature = response.data.main.temp;
+  /*celsiusTemperature = response.data.main.temp;*/
 
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
@@ -112,6 +112,12 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+search("Brisbane");
+
+/*Convertion of Fahrenheit and Celsius -  not needed at the moment
 function displayFahrenheitTemp(event) {
   event.preventDefault();
   let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
@@ -131,13 +137,8 @@ function displayCelsiusTemp(event) {
 
 let celsiusTemperature = null;
 
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", handleSubmit);
-
 let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", displayFahrenheitTemp);
 
 let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", displayCelsiusTemp);
-
-search("Brisbane");
+celsius.addEventListener("click", displayCelsiusTemp);*/
