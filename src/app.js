@@ -104,7 +104,7 @@ function displayTemperature(response) {
   let cityElement = document.querySelector("#city");
   let countryElement = document.querySelector("#country");
   let descriptionElement = document.querySelector("#description");
-  let humidityElement = document.querySelector("#humidity");
+  /*let humidityElement = document.querySelector("#humidity");*/
   let windElement = document.querySelector("#wind");
   let windDirectionElement = document.querySelector("#wind-direction");
   let feelsElement = document.querySelector("#feels");
@@ -120,7 +120,7 @@ function displayTemperature(response) {
   cityElement.innerHTML = response.data.name;
   countryElement.innerHTML = response.data.sys.country;
   descriptionElement.innerHTML = response.data.weather[0].description;
-  humidityElement.innerHTML = Math.round(response.data.main.humidity);
+  /*humidityElement.innerHTML = Math.round(response.data.main.humidity);*/
   windElement.innerHTML = Math.round(response.data.wind.speed * 3.6);
   windDirectionElement.innerHTML = getWindDirection(response.data.wind.deg);
   feelsElement.innerHTML = Math.round(response.data.main.feels_like);
