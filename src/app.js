@@ -114,7 +114,7 @@ function displayTemperature(response) {
   let tempMinElement = document.querySelector("#temp-min");
   let dateElement = document.querySelector("#date-time");
   let iconElement = document.querySelector("#icon");
-  let cityIcon = document.querySelector("#city-icon");
+  /*let cityIcon = document.querySelector("#city-icon");*/
 
   /*celsiusTemperature = response.data.main.temp;*/
 
@@ -135,6 +135,7 @@ function displayTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
+  /*
   if (cityElement.innerHTML === "Amsterdam") {
     cityIcon.setAttribute("src", `src/images/amsterdam.svg`);
   } else if (cityElement.innerHTML === "Austin") {
@@ -164,8 +165,8 @@ function displayTemperature(response) {
   } else if (cityElement.innerHTML === "Wellington") {
     cityIcon.setAttribute("src", `src/images/wellington.svg`);
   } else {
-    cityIcon.setAttribute("disabled", "");
-  }
+    cityIcon.innerHTML = "";
+  } */
 
   getForecast(response.data.coord);
 }

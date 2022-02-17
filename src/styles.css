@@ -105,11 +105,11 @@ strong {
 .sun-rise-set {
   max-width: 100px;
 }
-
+/*
 .city-icon {
-  max-width: 350px;
+  max-width: 70px;
   margin: 0 auto;
-}
+}*/
 
 .weather-icon {
   max-width: 50px;
