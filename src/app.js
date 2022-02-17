@@ -114,6 +114,7 @@ function displayTemperature(response) {
   let tempMinElement = document.querySelector("#temp-min");
   let dateElement = document.querySelector("#date-time");
   let iconElement = document.querySelector("#icon");
+  let cityIcon = document.querySelector("#city-icon");
 
   /*celsiusTemperature = response.data.main.temp;*/
 
@@ -133,6 +134,38 @@ function displayTemperature(response) {
     `src/images/${response.data.weather[0].icon}.svg`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  if (cityElement.innerHTML === "Amsterdam") {
+    cityIcon.setAttribute("src", `src/images/amsterdam.svg`);
+  } else if (cityElement.innerHTML === "Austin") {
+    cityIcon.setAttribute("src", `src/images/austin.svg`);
+  } else if (cityElement.innerHTML === "Barcelona") {
+    cityIcon.setAttribute("src", `src/images/barcelona.svg`);
+  } else if (cityElement.innerHTML === "Berlin") {
+    cityIcon.setAttribute("src", `src/images/berlin.svg`);
+  } else if (cityElement.innerHTML === "Cape Town") {
+    cityIcon.setAttribute("src", `src/images/cape.svg`);
+  } else if (cityElement.innerHTML === "Dublin, GB") {
+    cityIcon.setAttribute("src", `src/images/dublin.svg`);
+  } else if (cityElement.innerHTML === "London") {
+    cityIcon.setAttribute("src", `src/images/london.svg`);
+  } else if (cityElement.innerHTML === "New York") {
+    cityIcon.setAttribute("src", `src/images/new.svg`);
+  } else if (cityElement.innerHTML === "Paris") {
+    cityIcon.setAttribute("src", `src/images/paris.svg`);
+  } else if (cityElement.innerHTML === "San Francisco") {
+    cityIcon.setAttribute("src", `src/images/san.svg`);
+  } else if (cityElement.innerHTML === "Stockholm") {
+    cityIcon.setAttribute("src", `src/images/stockholm.svg`);
+  } else if (cityElement.innerHTML === "Sydney") {
+    cityIcon.setAttribute("src", `src/images/sydney.svg`);
+  } else if (cityElement.innerHTML === "Tokyo") {
+    cityIcon.setAttribute("src", `src/images/tokyo.svg`);
+  } else if (cityElement.innerHTML === "Wellington") {
+    cityIcon.setAttribute("src", `src/images/wellington.svg`);
+  } else {
+    cityIcon.setAttribute("disabled", "");
+  }
 
   getForecast(response.data.coord);
 }

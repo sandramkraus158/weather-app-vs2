@@ -102,6 +102,10 @@ strong {
   vertical-align: top;
 }
 
+.sun-rise-set {
+  max-width: 100px;
+}
+
 .city-icon {
   max-width: 350px;
   margin: 0 auto;
