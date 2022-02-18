@@ -61,9 +61,14 @@ strong {
   margin-bottom: 5px;
 }
 
+.last-updated {
+  margin: 10px 0;
+  font-size: 12px;
+}
+
 .city {
   font-size: 25px;
-  margin-top: 10px;
+  text-align: center;
 }
 
 .week-day-forecast,
@@ -109,11 +114,11 @@ strong {
 .sun-rise-set {
   max-width: 100px;
 }
-/*
+
 .city-icon {
   max-width: 70px;
   margin: 0 auto;
-}*/
+}
 
 .weather-icon {
   max-width: 50px;

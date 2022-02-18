@@ -112,7 +112,7 @@ function displayTemperature(response) {
   let tempMinElement = document.querySelector("#temp-min");
   let dateElement = document.querySelector("#date-time");
   let iconElement = document.querySelector("#icon");
-  /*let cityIcon = document.querySelector("#city-icon");*/
+  let cityIcon = document.querySelector("#city-icon");
 
   /*celsiusTemperature = response.data.main.temp;*/
 
@@ -133,7 +133,7 @@ function displayTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
-  /*
+  cityIcon.style.display = "inline";
   if (cityElement.innerHTML === "Amsterdam") {
     cityIcon.setAttribute("src", `src/images/amsterdam.svg`);
   } else if (cityElement.innerHTML === "Austin") {
@@ -144,8 +144,6 @@ function displayTemperature(response) {
     cityIcon.setAttribute("src", `src/images/berlin.svg`);
   } else if (cityElement.innerHTML === "Cape Town") {
     cityIcon.setAttribute("src", `src/images/cape.svg`);
-  } else if (cityElement.innerHTML === "Dublin, GB") {
-    cityIcon.setAttribute("src", `src/images/dublin.svg`);
   } else if (cityElement.innerHTML === "London") {
     cityIcon.setAttribute("src", `src/images/london.svg`);
   } else if (cityElement.innerHTML === "New York") {
@@ -163,8 +161,8 @@ function displayTemperature(response) {
   } else if (cityElement.innerHTML === "Wellington") {
     cityIcon.setAttribute("src", `src/images/wellington.svg`);
   } else {
-    cityIcon.innerHTML = "";
-  } */
+    cityIcon.style.display = "none";
+  }
 
   getForecast(response.data.coord);
 }
